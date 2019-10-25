@@ -1,1 +1,1 @@
-# cricketTournamentManager
+# Cricket Tournament Manager
