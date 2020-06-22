@@ -5,11 +5,116 @@
 # Created by: PyQt5 UI code generator 5.9.2
 #
 # WARNING! All changes made in this file will be lost!
-
+from databaseConnection import databaseConnector
+from liveMatch import Batsman, Bowler, Team,Ui_matchPage
 from PyQt5 import QtCore, QtGui, QtWidgets
+import MySQLdb as mdb
+from PyQt5.QtWidgets import QMessageBox
 
 class Ui_startMatch(object):
-    def setupUi(self, startMatch):
+
+    def initTeam1ComboBox(self):
+        self.team1Players = self.database.getPlayers(self.team1)
+        for item in self.team1Players:
+            self.player1_1.addItem(item)
+            self.player2_1.addItem(item)
+            self.player3_1.addItem(item)
+            self.player4_1.addItem(item)
+            self.player5_1.addItem(item)
+            self.player6_1.addItem(item)
+            self.player7_1.addItem(item)
+            self.player8_1.addItem(item)
+            self.player9_1.addItem(item)
+            self.player10_1.addItem(item)
+            self.player11_1.addItem(item)
+            self.team1WK.addItem(item)
+    
+    def initTeam2ComboBox(self):
+        self.team2Players = self.database.getPlayers(self.team2)
+        for item in self.team2Players:
+            self.player1_2.addItem(item)
+            self.player2_2.addItem(item)
+            self.player3_2.addItem(item)
+            self.player4_2.addItem(item)
+            self.player5_2.addItem(item)
+            self.player6_2.addItem(item)
+            self.player7_2.addItem(item)
+            self.player8_2.addItem(item)
+            self.player9_2.addItem(item)
+            self.player10_2.addItem(item)
+            self.player11_2.addItem(item)
+            self.team2WK.addItem(item)
+
+    def teamOK(self, team1, team2):
+        setTeam1=set()
+        setTeam2=set()
+        setTeam1.add("Select Captain")
+        setTeam1.add("Select Player")
+        setTeam2.add("Select Captain")
+        setTeam2.add("Select Player")
+        for player in team1[2:]:
+            if player in setTeam1:
+                return False
+            setTeam1.add(player)
+        for player in team2[2:]:
+            if player in setTeam2:
+                return False
+            setTeam2.add(player)
+        if team1[1] not in setTeam1 or team2[1] not in setTeam2:
+            print("No Wicket Keeper in Playing XI")
+            print(team1[1],team2[1])
+            print(setTeam1)
+            print(setTeam2)
+            return False
+        return True
+
+    def onClickStartMatch(self):
+        
+        p1_t1_c=self.player1_1.currentText()
+        p2_t1=self.player2_1.currentText()
+        p3_t1=self.player3_1.currentText()
+        p4_t1=self.player4_1.currentText()
+        p5_t1=self.player5_1.currentText()
+        p6_t1=self.player6_1.currentText()
+        p7_t1=self.player7_1.currentText()
+        p8_t1=self.player8_1.currentText()
+        p9_t1=self.player9_1.currentText()
+        p10_t1=self.player10_1.currentText()
+        p11_t1=self.player11_1.currentText()
+        wk_t1=self.team1WK.currentText()
+        #team2
+        p1_t2_c=self.player1_2.currentText()
+        p2_t2=self.player2_2.currentText()
+        p3_t2=self.player3_2.currentText()
+        p4_t2=self.player4_2.currentText()
+        p5_t2=self.player5_2.currentText()
+        p6_t2=self.player6_2.currentText()
+        p7_t2=self.player7_2.currentText()
+        p8_t2=self.player8_2.currentText()
+        p9_t2=self.player9_2.currentText()
+        p10_t2=self.player10_2.currentText()
+        p11_t2=self.player11_2.currentText()
+        wk_t2=self.team2WK.currentText()
+        ######        
+        tossWonBy=self.tossWin.currentText();
+        electedTo=self.electTo.currentText()
+        team1=[self.team1,wk_t1,p1_t1_c,p2_t1,p3_t1,p4_t1,p5_t1,p6_t1,p7_t1,p8_t1,p9_t1,p10_t1,p11_t1]
+        team2=[self.team2,wk_t2,p1_t2_c,p2_t2,p3_t2,p4_t2,p5_t2,p6_t2,p7_t2,p8_t2,p9_t2,p10_t2,p11_t2]
+        toss=[tossWonBy,electedTo,self.overs,self.matchId]
+        if self.teamOK(team1[:],team2[:]):
+            self.database.startLiveMatch(self.matchId)
+            self.widgets=QtWidgets.QWidget()
+            self.ui=Ui_matchPage()
+            self.ui.setupUi(self.widgets,toss, team1, team2)
+            self.widgets.show()
+        else:
+            print ("Wrong Selection")
+
+    def setupUi(self, startMatch, teamList):
+        self.matchId = teamList[0]
+        self.team1 = teamList[1]
+        self.team2 = teamList[2]
+        self.overs = teamList[3]
         startMatch.setObjectName("startMatch")
         startMatch.resize(1151, 561)
         startMatch.setStyleSheet("background-color: rgb(11, 12, 16); color: rgb(102, 252, 241);")
@@ -22,8 +127,7 @@ class Ui_startMatch(object):
         font = QtGui.QFont()
         font.setPointSize(18)
         self.startMatchButton.setFont(font)
-        self.startMatchButton.setStyleSheet("background-color: rgb(17, 100, 102);\n"
-"color: rgb(31, 40, 51);")
+        self.startMatchButton.setStyleSheet("background-color: rgb(17, 100, 102); color: rgb(31, 40, 51);")
         self.startMatchButton.setObjectName("startMatchButton")
         self.gridLayout_2.addWidget(self.startMatchButton, 1, 0, 1, 1)
         self.formLayout = QtWidgets.QFormLayout()
@@ -181,8 +285,16 @@ class Ui_startMatch(object):
         self.gridLayout_3.addWidget(self.verticalGroupBox, 0, 0, 1, 1)
         self.gridLayout_3.setColumnStretch(0, 1)
         self.gridLayout_3.setColumnStretch(2, 1)
+        self.database=databaseConnector()
 
         self.retranslateUi(startMatch)
+        self.verticalGroupBox_2.setTitle(self.team2)
+        self.verticalGroupBox.setTitle(self.team1)
+        self.initTeam1ComboBox()
+        self.initTeam2ComboBox()
+        self.tossWin.addItem(self.team1)
+        self.tossWin.addItem(self.team2)
+        self.startMatchButton.clicked.connect(self.onClickStartMatch)
         QtCore.QMetaObject.connectSlotsByName(startMatch)
 
     def retranslateUi(self, startMatch):

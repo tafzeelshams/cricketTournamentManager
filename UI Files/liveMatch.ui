@@ -1,0 +1,949 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>matchPage</class>
+ <widget class="QWidget" name="matchPage">
+  <property name="enabled">
+   <bool>true</bool>
+  </property>
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>1724</width>
+    <height>895</height>
+   </rect>
+  </property>
+  <property name="sizePolicy">
+   <sizepolicy hsizetype="Expanding" vsizetype="Expanding">
+    <horstretch>1</horstretch>
+    <verstretch>1</verstretch>
+   </sizepolicy>
+  </property>
+  <property name="minimumSize">
+   <size>
+    <width>0</width>
+    <height>0</height>
+   </size>
+  </property>
+  <property name="maximumSize">
+   <size>
+    <width>10000</width>
+    <height>6000</height>
+   </size>
+  </property>
+  <property name="windowTitle">
+   <string>Match</string>
+  </property>
+  <property name="windowOpacity">
+   <double>1.000000000000000</double>
+  </property>
+  <property name="styleSheet">
+   <string notr="true">background-color: rgb(11, 12, 16);</string>
+  </property>
+  <widget class="QFrame" name="matchFrame">
+   <property name="enabled">
+    <bool>true</bool>
+   </property>
+   <property name="geometry">
+    <rect>
+     <x>10</x>
+     <y>10</y>
+     <width>1701</width>
+     <height>881</height>
+    </rect>
+   </property>
+   <property name="sizePolicy">
+    <sizepolicy hsizetype="Expanding" vsizetype="Expanding">
+     <horstretch>0</horstretch>
+     <verstretch>0</verstretch>
+    </sizepolicy>
+   </property>
+   <layout class="QGridLayout" name="gridLayout_7">
+    <property name="sizeConstraint">
+     <enum>QLayout::SetNoConstraint</enum>
+    </property>
+    <item row="0" column="0">
+     <widget class="QWidget" name="matchSummaryWidget" native="true">
+      <property name="sizePolicy">
+       <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
+        <horstretch>3</horstretch>
+        <verstretch>0</verstretch>
+       </sizepolicy>
+      </property>
+      <layout class="QGridLayout" name="gridLayout_6" rowstretch="0,0,0,0,0,0,0,0">
+       <property name="sizeConstraint">
+        <enum>QLayout::SetMaximumSize</enum>
+       </property>
+       <item row="0" column="0">
+        <widget class="QLabel" name="matchStatus">
+         <property name="maximumSize">
+          <size>
+           <width>16777215</width>
+           <height>38</height>
+          </size>
+         </property>
+         <property name="styleSheet">
+          <string notr="true">background-color: rgb(69, 162, 158);</string>
+         </property>
+         <property name="text">
+          <string>Team2 won the match by 6 wickets</string>
+         </property>
+        </widget>
+       </item>
+       <item row="1" column="0">
+        <widget class="QWidget" name="teamsScore" native="true">
+         <property name="sizePolicy">
+          <sizepolicy hsizetype="Preferred" vsizetype="Fixed">
+           <horstretch>0</horstretch>
+           <verstretch>0</verstretch>
+          </sizepolicy>
+         </property>
+         <property name="styleSheet">
+          <string notr="true">background-color: rgb(31, 40, 51);</string>
+         </property>
+         <layout class="QGridLayout" name="gridLayout_3">
+          <property name="sizeConstraint">
+           <enum>QLayout::SetMaximumSize</enum>
+          </property>
+          <item row="0" column="0">
+           <widget class="QWidget" name="inning1Score" native="true">
+            <property name="sizePolicy">
+             <sizepolicy hsizetype="Expanding" vsizetype="Expanding">
+              <horstretch>0</horstretch>
+              <verstretch>0</verstretch>
+             </sizepolicy>
+            </property>
+            <property name="styleSheet">
+             <string notr="true">background-color: rgb(31, 40, 51); color: rgb(197, 198, 199);</string>
+            </property>
+            <layout class="QVBoxLayout" name="verticalLayout">
+             <item alignment="Qt::AlignHCenter">
+              <widget class="QLabel" name="team1Name">
+               <property name="styleSheet">
+                <string notr="true">font: 24pt &quot;Cantarell&quot;;</string>
+               </property>
+               <property name="text">
+                <string>Team1</string>
+               </property>
+               <property name="scaledContents">
+                <bool>false</bool>
+               </property>
+              </widget>
+             </item>
+             <item alignment="Qt::AlignHCenter">
+              <widget class="QLabel" name="team1Score">
+               <property name="styleSheet">
+                <string notr="true">font: 20pt &quot;Cantarell&quot;;</string>
+               </property>
+               <property name="frameShape">
+                <enum>QFrame::NoFrame</enum>
+               </property>
+               <property name="text">
+                <string>145/8</string>
+               </property>
+              </widget>
+             </item>
+             <item>
+              <widget class="QWidget" name="team1OversWidget" native="true">
+               <property name="sizePolicy">
+                <sizepolicy hsizetype="Expanding" vsizetype="Expanding">
+                 <horstretch>0</horstretch>
+                 <verstretch>0</verstretch>
+                </sizepolicy>
+               </property>
+               <layout class="QHBoxLayout" name="horizontalLayout">
+                <property name="sizeConstraint">
+                 <enum>QLayout::SetMaximumSize</enum>
+                </property>
+                <property name="leftMargin">
+                 <number>1</number>
+                </property>
+                <property name="topMargin">
+                 <number>1</number>
+                </property>
+                <property name="rightMargin">
+                 <number>1</number>
+                </property>
+                <property name="bottomMargin">
+                 <number>1</number>
+                </property>
+                <item alignment="Qt::AlignRight">
+                 <widget class="QLabel" name="oversLabel1">
+                  <property name="sizePolicy">
+                   <sizepolicy hsizetype="Preferred" vsizetype="Expanding">
+                    <horstretch>0</horstretch>
+                    <verstretch>0</verstretch>
+                   </sizepolicy>
+                  </property>
+                  <property name="styleSheet">
+                   <string notr="true">font: 16pt &quot;Cantarell&quot;;</string>
+                  </property>
+                  <property name="text">
+                   <string>Overs :</string>
+                  </property>
+                 </widget>
+                </item>
+                <item alignment="Qt::AlignLeft">
+                 <widget class="QLabel" name="team1Over">
+                  <property name="sizePolicy">
+                   <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
+                    <horstretch>0</horstretch>
+                    <verstretch>0</verstretch>
+                   </sizepolicy>
+                  </property>
+                  <property name="styleSheet">
+                   <string notr="true">font: 17pt &quot;Cantarell&quot;;</string>
+                  </property>
+                  <property name="text">
+                   <string>20</string>
+                  </property>
+                 </widget>
+                </item>
+               </layout>
+              </widget>
+             </item>
+            </layout>
+           </widget>
+          </item>
+          <item row="0" column="2">
+           <widget class="QWidget" name="inning2Score" native="true">
+            <property name="sizePolicy">
+             <sizepolicy hsizetype="Expanding" vsizetype="Expanding">
+              <horstretch>0</horstretch>
+              <verstretch>0</verstretch>
+             </sizepolicy>
+            </property>
+            <property name="styleSheet">
+             <string notr="true">background-color: rgb(31, 40, 51); color: rgb(197, 198, 199);</string>
+            </property>
+            <layout class="QVBoxLayout" name="verticalLayout_2">
+             <item alignment="Qt::AlignHCenter">
+              <widget class="QLabel" name="team2Name">
+               <property name="styleSheet">
+                <string notr="true">font: 24pt &quot;Cantarell&quot;;</string>
+               </property>
+               <property name="text">
+                <string>Team2</string>
+               </property>
+              </widget>
+             </item>
+             <item alignment="Qt::AlignHCenter">
+              <widget class="QLabel" name="team2Score">
+               <property name="styleSheet">
+                <string notr="true">font: 20pt &quot;Cantarell&quot;;</string>
+               </property>
+               <property name="text">
+                <string>149/4</string>
+               </property>
+              </widget>
+             </item>
+             <item>
+              <widget class="QWidget" name="team2OversWidget" native="true">
+               <property name="sizePolicy">
+                <sizepolicy hsizetype="Expanding" vsizetype="Expanding">
+                 <horstretch>0</horstretch>
+                 <verstretch>0</verstretch>
+                </sizepolicy>
+               </property>
+               <layout class="QHBoxLayout" name="horizontalLayout_2">
+                <property name="sizeConstraint">
+                 <enum>QLayout::SetMaximumSize</enum>
+                </property>
+                <property name="leftMargin">
+                 <number>1</number>
+                </property>
+                <property name="topMargin">
+                 <number>1</number>
+                </property>
+                <property name="rightMargin">
+                 <number>1</number>
+                </property>
+                <property name="bottomMargin">
+                 <number>1</number>
+                </property>
+                <item alignment="Qt::AlignRight">
+                 <widget class="QLabel" name="oversLabel2">
+                  <property name="sizePolicy">
+                   <sizepolicy hsizetype="Preferred" vsizetype="Expanding">
+                    <horstretch>0</horstretch>
+                    <verstretch>0</verstretch>
+                   </sizepolicy>
+                  </property>
+                  <property name="styleSheet">
+                   <string notr="true">font: 16pt &quot;Cantarell&quot;;</string>
+                  </property>
+                  <property name="text">
+                   <string>Overs :</string>
+                  </property>
+                 </widget>
+                </item>
+                <item>
+                 <widget class="QLabel" name="team2Over">
+                  <property name="styleSheet">
+                   <string notr="true">font: 17pt &quot;Cantarell&quot;;</string>
+                  </property>
+                  <property name="text">
+                   <string>18.4</string>
+                  </property>
+                 </widget>
+                </item>
+               </layout>
+              </widget>
+             </item>
+            </layout>
+           </widget>
+          </item>
+          <item row="0" column="1">
+           <widget class="Line" name="line">
+            <property name="styleSheet">
+             <string notr="true">color: rgb(69, 162, 158);
+background-color: rgb(69, 162, 158);</string>
+            </property>
+            <property name="orientation">
+             <enum>Qt::Vertical</enum>
+            </property>
+           </widget>
+          </item>
+         </layout>
+        </widget>
+       </item>
+       <item row="3" column="0">
+        <widget class="QWidget" name="batsmanWidget" native="true">
+         <property name="sizePolicy">
+          <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
+           <horstretch>0</horstretch>
+           <verstretch>0</verstretch>
+          </sizepolicy>
+         </property>
+         <layout class="QGridLayout" name="gridLayout_4">
+          <item row="0" column="0">
+           <widget class="QWidget" name="strikerWidget" native="true">
+            <property name="sizePolicy">
+             <sizepolicy hsizetype="Expanding" vsizetype="Preferred">
+              <horstretch>0</horstretch>
+              <verstretch>0</verstretch>
+             </sizepolicy>
+            </property>
+            <property name="styleSheet">
+             <string notr="true">background-color: rgb(69, 162, 158); color: rgb(31, 40, 51);</string>
+            </property>
+            <layout class="QHBoxLayout" name="horizontalLayout_3">
+             <property name="spacing">
+              <number>10</number>
+             </property>
+             <property name="leftMargin">
+              <number>10</number>
+             </property>
+             <property name="topMargin">
+              <number>10</number>
+             </property>
+             <property name="rightMargin">
+              <number>10</number>
+             </property>
+             <property name="bottomMargin">
+              <number>10</number>
+             </property>
+             <item>
+              <widget class="QLabel" name="strikerName">
+               <property name="styleSheet">
+                <string notr="true">font: 18pt &quot;Cantarell&quot;;</string>
+               </property>
+               <property name="text">
+                <string>Dhoni</string>
+               </property>
+              </widget>
+             </item>
+             <item alignment="Qt::AlignRight">
+              <widget class="QLabel" name="strikerRunBall">
+               <property name="styleSheet">
+                <string notr="true">font: 18pt &quot;Cantarell&quot;;</string>
+               </property>
+               <property name="text">
+                <string>45(31)</string>
+               </property>
+              </widget>
+             </item>
+            </layout>
+           </widget>
+          </item>
+          <item row="0" column="1">
+           <widget class="QWidget" name="nonStrikerWidget" native="true">
+            <property name="sizePolicy">
+             <sizepolicy hsizetype="Expanding" vsizetype="Preferred">
+              <horstretch>0</horstretch>
+              <verstretch>0</verstretch>
+             </sizepolicy>
+            </property>
+            <property name="styleSheet">
+             <string notr="true">background-color: rgb(69, 162, 158); color: rgb(31, 40, 51);</string>
+            </property>
+            <layout class="QHBoxLayout" name="horizontalLayout_4">
+             <property name="leftMargin">
+              <number>10</number>
+             </property>
+             <property name="topMargin">
+              <number>10</number>
+             </property>
+             <property name="rightMargin">
+              <number>10</number>
+             </property>
+             <property name="bottomMargin">
+              <number>10</number>
+             </property>
+             <item>
+              <widget class="QLabel" name="nonStrikerName">
+               <property name="styleSheet">
+                <string notr="true">font: 18pt &quot;Cantarell&quot;;</string>
+               </property>
+               <property name="text">
+                <string>DuPlesis</string>
+               </property>
+              </widget>
+             </item>
+             <item alignment="Qt::AlignRight">
+              <widget class="QLabel" name="nonStrikerRunBall">
+               <property name="styleSheet">
+                <string notr="true">font: 18pt &quot;Cantarell&quot;;</string>
+               </property>
+               <property name="text">
+                <string>76(62)</string>
+               </property>
+              </widget>
+             </item>
+            </layout>
+           </widget>
+          </item>
+         </layout>
+        </widget>
+       </item>
+       <item row="4" column="0">
+        <widget class="QWidget" name="oversWidget" native="true">
+         <layout class="QGridLayout" name="gridLayout_5" columnminimumwidth="0,0">
+          <item row="0" column="1">
+           <widget class="QWidget" name="thisOverWidget" native="true">
+            <property name="sizePolicy">
+             <sizepolicy hsizetype="Expanding" vsizetype="Minimum">
+              <horstretch>0</horstretch>
+              <verstretch>0</verstretch>
+             </sizepolicy>
+            </property>
+            <property name="styleSheet">
+             <string notr="true">background-color: rgb(69, 162, 158); color: rgb(31, 40, 51);</string>
+            </property>
+            <layout class="QVBoxLayout" name="verticalLayout_4">
+             <item alignment="Qt::AlignHCenter">
+              <widget class="QLabel" name="thisOver">
+               <property name="sizePolicy">
+                <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
+                 <horstretch>0</horstretch>
+                 <verstretch>0</verstretch>
+                </sizepolicy>
+               </property>
+               <property name="styleSheet">
+                <string notr="true">font: 18pt &quot;Cantarell&quot;;</string>
+               </property>
+               <property name="text">
+                <string>1   1   0   4</string>
+               </property>
+              </widget>
+             </item>
+            </layout>
+           </widget>
+          </item>
+          <item row="0" column="0">
+           <widget class="QWidget" name="bowlwerWidget" native="true">
+            <property name="sizePolicy">
+             <sizepolicy hsizetype="Expanding" vsizetype="Minimum">
+              <horstretch>0</horstretch>
+              <verstretch>0</verstretch>
+             </sizepolicy>
+            </property>
+            <property name="styleSheet">
+             <string notr="true">background-color: rgb(69, 162, 158);
+color: rgb(31, 40, 51);</string>
+            </property>
+            <layout class="QVBoxLayout" name="verticalLayout_3">
+             <item alignment="Qt::AlignHCenter">
+              <widget class="QLabel" name="bowlerName">
+               <property name="styleSheet">
+                <string notr="true">font: 18pt &quot;Cantarell&quot;;</string>
+               </property>
+               <property name="text">
+                <string>Steyn</string>
+               </property>
+              </widget>
+             </item>
+             <item alignment="Qt::AlignHCenter">
+              <widget class="QLabel" name="bowlerStats">
+               <property name="styleSheet">
+                <string notr="true">font: 16pt &quot;Cantarell&quot;;</string>
+               </property>
+               <property name="text">
+                <string>18/3  (3.4)</string>
+               </property>
+              </widget>
+             </item>
+            </layout>
+           </widget>
+          </item>
+         </layout>
+        </widget>
+       </item>
+       <item row="6" column="0">
+        <widget class="QWidget" name="optionsWidget" native="true">
+         <property name="sizePolicy">
+          <sizepolicy hsizetype="Expanding" vsizetype="Preferred">
+           <horstretch>0</horstretch>
+           <verstretch>0</verstretch>
+          </sizepolicy>
+         </property>
+         <property name="styleSheet">
+          <string notr="true">background-color: rgb(17, 100, 102); background-color: rgb(44, 53, 49);</string>
+         </property>
+         <layout class="QGridLayout" name="gridLayout">
+          <item row="1" column="1">
+           <widget class="QCheckBox" name="isLegBye">
+            <property name="font">
+             <font>
+              <pointsize>18</pointsize>
+             </font>
+            </property>
+            <property name="styleSheet">
+             <string notr="true">color: rgb(102, 252, 241);</string>
+            </property>
+            <property name="text">
+             <string>Leg Byes</string>
+            </property>
+           </widget>
+          </item>
+          <item row="1" column="0">
+           <widget class="QCheckBox" name="isBye">
+            <property name="font">
+             <font>
+              <pointsize>18</pointsize>
+             </font>
+            </property>
+            <property name="styleSheet">
+             <string notr="true">color: rgb(102, 252, 241);</string>
+            </property>
+            <property name="text">
+             <string>Byes</string>
+            </property>
+           </widget>
+          </item>
+          <item row="0" column="0">
+           <widget class="QCheckBox" name="isWide">
+            <property name="font">
+             <font>
+              <pointsize>18</pointsize>
+             </font>
+            </property>
+            <property name="styleSheet">
+             <string notr="true">color: rgb(102, 252, 241);</string>
+            </property>
+            <property name="text">
+             <string>Wide</string>
+            </property>
+           </widget>
+          </item>
+          <item row="0" column="2">
+           <widget class="QCheckBox" name="isWicket">
+            <property name="font">
+             <font>
+              <pointsize>18</pointsize>
+             </font>
+            </property>
+            <property name="styleSheet">
+             <string notr="true">color: rgb(102, 252, 241);</string>
+            </property>
+            <property name="text">
+             <string>Wicket</string>
+            </property>
+           </widget>
+          </item>
+          <item row="0" column="1">
+           <widget class="QCheckBox" name="isNoBall">
+            <property name="font">
+             <font>
+              <pointsize>18</pointsize>
+             </font>
+            </property>
+            <property name="styleSheet">
+             <string notr="true">color: rgb(102, 252, 241);</string>
+            </property>
+            <property name="text">
+             <string>No Ball</string>
+            </property>
+           </widget>
+          </item>
+          <item row="1" column="2">
+           <widget class="QPushButton" name="swapBatsmanButton">
+            <property name="font">
+             <font>
+              <pointsize>18</pointsize>
+             </font>
+            </property>
+            <property name="styleSheet">
+             <string notr="true">background-color: rgb(102, 252, 241); color: rgb(31, 40, 51);</string>
+            </property>
+            <property name="text">
+             <string>Swap Batsman</string>
+            </property>
+           </widget>
+          </item>
+          <item row="0" column="3">
+           <widget class="QPushButton" name="applyDLButton">
+            <property name="font">
+             <font>
+              <pointsize>18</pointsize>
+             </font>
+            </property>
+            <property name="styleSheet">
+             <string notr="true">background-color: rgb(102, 252, 241); color: rgb(31, 40, 51);</string>
+            </property>
+            <property name="text">
+             <string>Apply DL</string>
+            </property>
+           </widget>
+          </item>
+          <item row="1" column="3">
+           <widget class="QPushButton" name="endMatchButton">
+            <property name="font">
+             <font>
+              <pointsize>18</pointsize>
+             </font>
+            </property>
+            <property name="styleSheet">
+             <string notr="true">background-color: rgb(102, 252, 241); color: rgb(31, 40, 51);</string>
+            </property>
+            <property name="text">
+             <string>End Match</string>
+            </property>
+           </widget>
+          </item>
+         </layout>
+        </widget>
+       </item>
+       <item row="7" column="0">
+        <widget class="QWidget" name="scorerWidget" native="true">
+         <property name="sizePolicy">
+          <sizepolicy hsizetype="Expanding" vsizetype="Preferred">
+           <horstretch>0</horstretch>
+           <verstretch>0</verstretch>
+          </sizepolicy>
+         </property>
+         <property name="styleSheet">
+          <string notr="true"/>
+         </property>
+         <layout class="QGridLayout" name="gridLayout_2">
+          <item row="0" column="3">
+           <widget class="QPushButton" name="button3">
+            <property name="font">
+             <font>
+              <pointsize>25</pointsize>
+             </font>
+            </property>
+            <property name="styleSheet">
+             <string notr="true">color: rgb(102, 252, 241); background-color: rgb(31, 40, 51);</string>
+            </property>
+            <property name="text">
+             <string>3</string>
+            </property>
+           </widget>
+          </item>
+          <item row="2" column="2">
+           <widget class="QPushButton" name="button6">
+            <property name="font">
+             <font>
+              <pointsize>25</pointsize>
+             </font>
+            </property>
+            <property name="styleSheet">
+             <string notr="true">color: rgb(102, 252, 241); background-color: rgb(31, 40, 51);</string>
+            </property>
+            <property name="text">
+             <string>6</string>
+            </property>
+           </widget>
+          </item>
+          <item row="2" column="1">
+           <widget class="QPushButton" name="button5">
+            <property name="font">
+             <font>
+              <pointsize>25</pointsize>
+             </font>
+            </property>
+            <property name="styleSheet">
+             <string notr="true">color: rgb(102, 252, 241); background-color: rgb(31, 40, 51);</string>
+            </property>
+            <property name="text">
+             <string>5</string>
+            </property>
+           </widget>
+          </item>
+          <item row="0" column="2">
+           <widget class="QPushButton" name="button2">
+            <property name="font">
+             <font>
+              <pointsize>25</pointsize>
+             </font>
+            </property>
+            <property name="styleSheet">
+             <string notr="true">color: rgb(102, 252, 241); background-color: rgb(31, 40, 51);</string>
+            </property>
+            <property name="text">
+             <string>2</string>
+            </property>
+           </widget>
+          </item>
+          <item row="2" column="3">
+           <widget class="QPushButton" name="buttonEndInnings">
+            <property name="font">
+             <font>
+              <pointsize>25</pointsize>
+             </font>
+            </property>
+            <property name="styleSheet">
+             <string notr="true">background-color: rgb(102, 252, 241);</string>
+            </property>
+            <property name="text">
+             <string>End Innings</string>
+            </property>
+           </widget>
+          </item>
+          <item row="2" column="0">
+           <widget class="QPushButton" name="button4">
+            <property name="font">
+             <font>
+              <pointsize>25</pointsize>
+             </font>
+            </property>
+            <property name="styleSheet">
+             <string notr="true">color: rgb(102, 252, 241); background-color: rgb(31, 40, 51);</string>
+            </property>
+            <property name="text">
+             <string>4</string>
+            </property>
+           </widget>
+          </item>
+          <item row="0" column="1">
+           <widget class="QPushButton" name="button1">
+            <property name="font">
+             <font>
+              <pointsize>25</pointsize>
+             </font>
+            </property>
+            <property name="styleSheet">
+             <string notr="true">color: rgb(102, 252, 241); background-color: rgb(31, 40, 51);</string>
+            </property>
+            <property name="text">
+             <string>1</string>
+            </property>
+           </widget>
+          </item>
+          <item row="0" column="0">
+           <widget class="QPushButton" name="button0">
+            <property name="font">
+             <font>
+              <pointsize>25</pointsize>
+             </font>
+            </property>
+            <property name="styleSheet">
+             <string notr="true">color: rgb(102, 252, 241); background-color: rgb(31, 40, 51);</string>
+            </property>
+            <property name="text">
+             <string>0</string>
+            </property>
+           </widget>
+          </item>
+         </layout>
+        </widget>
+       </item>
+       <item row="2" column="0">
+        <spacer name="verticalSpacer">
+         <property name="orientation">
+          <enum>Qt::Vertical</enum>
+         </property>
+         <property name="sizeType">
+          <enum>QSizePolicy::Maximum</enum>
+         </property>
+         <property name="sizeHint" stdset="0">
+          <size>
+           <width>20</width>
+           <height>40</height>
+          </size>
+         </property>
+        </spacer>
+       </item>
+       <item row="5" column="0">
+        <spacer name="verticalSpacer_2">
+         <property name="orientation">
+          <enum>Qt::Vertical</enum>
+         </property>
+         <property name="sizeHint" stdset="0">
+          <size>
+           <width>20</width>
+           <height>40</height>
+          </size>
+         </property>
+        </spacer>
+       </item>
+      </layout>
+     </widget>
+    </item>
+    <item row="0" column="1">
+     <widget class="QWidget" name="scoreCardWidget" native="true">
+      <property name="sizePolicy">
+       <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
+        <horstretch>2</horstretch>
+        <verstretch>0</verstretch>
+       </sizepolicy>
+      </property>
+      <layout class="QVBoxLayout" name="verticalLayout_5">
+       <property name="sizeConstraint">
+        <enum>QLayout::SetMaximumSize</enum>
+       </property>
+       <item>
+        <widget class="QTabWidget" name="scoreCardTab">
+         <property name="styleSheet">
+          <string notr="true">background-color: rgb(31, 40, 51); color: rgb(102, 252, 241);</string>
+         </property>
+         <property name="currentIndex">
+          <number>0</number>
+         </property>
+         <widget class="QWidget" name="firstInningTab">
+          <attribute name="title">
+           <string>1st Inning</string>
+          </attribute>
+          <widget class="QTabWidget" name="tabWidget">
+           <property name="geometry">
+            <rect>
+             <x>6</x>
+             <y>9</y>
+             <width>631</width>
+             <height>791</height>
+            </rect>
+           </property>
+           <property name="styleSheet">
+            <string notr="true">background-color: rgb(17, 100, 102); color: rgb(197, 198, 199);</string>
+           </property>
+           <property name="tabPosition">
+            <enum>QTabWidget::West</enum>
+           </property>
+           <property name="currentIndex">
+            <number>1</number>
+           </property>
+           <widget class="QWidget" name="batting1Tab">
+            <attribute name="title">
+             <string>Batting</string>
+            </attribute>
+            <widget class="QTableWidget" name="batting1TableWidget">
+             <property name="geometry">
+              <rect>
+               <x>5</x>
+               <y>11</y>
+               <width>581</width>
+               <height>761</height>
+              </rect>
+             </property>
+            </widget>
+           </widget>
+           <widget class="QWidget" name="bowling1Tab">
+            <attribute name="title">
+             <string>Bowling</string>
+            </attribute>
+            <widget class="QTableWidget" name="bowling1TableWidget">
+             <property name="geometry">
+              <rect>
+               <x>10</x>
+               <y>10</y>
+               <width>581</width>
+               <height>771</height>
+              </rect>
+             </property>
+            </widget>
+           </widget>
+          </widget>
+         </widget>
+         <widget class="QWidget" name="scondInningTab">
+          <attribute name="title">
+           <string>2nd Inning</string>
+          </attribute>
+          <widget class="QTabWidget" name="tabWidget_2">
+           <property name="geometry">
+            <rect>
+             <x>10</x>
+             <y>10</y>
+             <width>631</width>
+             <height>791</height>
+            </rect>
+           </property>
+           <property name="styleSheet">
+            <string notr="true">background-color: rgb(17, 100, 102); color: rgb(197, 198, 199);</string>
+           </property>
+           <property name="tabPosition">
+            <enum>QTabWidget::West</enum>
+           </property>
+           <property name="currentIndex">
+            <number>0</number>
+           </property>
+           <widget class="QWidget" name="batting2Tab">
+            <attribute name="title">
+             <string>Batting</string>
+            </attribute>
+            <widget class="QTableWidget" name="batting2TableWidget">
+             <property name="geometry">
+              <rect>
+               <x>5</x>
+               <y>11</y>
+               <width>581</width>
+               <height>771</height>
+              </rect>
+             </property>
+            </widget>
+           </widget>
+           <widget class="QWidget" name="bowling2Tab">
+            <attribute name="title">
+             <string>Bowling</string>
+            </attribute>
+            <widget class="QTableWidget" name="bowling2TableWidget">
+             <property name="geometry">
+              <rect>
+               <x>5</x>
+               <y>11</y>
+               <width>591</width>
+               <height>771</height>
+              </rect>
+             </property>
+            </widget>
+           </widget>
+          </widget>
+         </widget>
+        </widget>
+       </item>
+      </layout>
+     </widget>
+    </item>
+   </layout>
+  </widget>
+ </widget>
+ <tabstops>
+  <tabstop>scoreCardTab</tabstop>
+  <tabstop>isLegBye</tabstop>
+  <tabstop>isBye</tabstop>
+  <tabstop>isWide</tabstop>
+  <tabstop>isWicket</tabstop>
+  <tabstop>swapBatsmanButton</tabstop>
+  <tabstop>isNoBall</tabstop>
+  <tabstop>button3</tabstop>
+  <tabstop>button6</tabstop>
+  <tabstop>button5</tabstop>
+  <tabstop>button2</tabstop>
+  <tabstop>buttonEndInnings</tabstop>
+  <tabstop>button4</tabstop>
+  <tabstop>button1</tabstop>
+  <tabstop>button0</tabstop>
+ </tabstops>
+ <resources/>
+ <connections/>
+</ui>

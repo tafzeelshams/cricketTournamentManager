@@ -377,10 +377,26 @@ color: rgb(31, 40, 51);</string>
        </rect>
       </property>
       <property name="styleSheet">
-       <string notr="true">background-color: rgb(17, 100, 102); color: rgb(31, 40, 51);</string>
+       <string notr="true">background-color: rgb(204, 0, 0); color: rgb(31, 40, 51);</string>
       </property>
       <property name="text">
        <string>Delete Match</string>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="refreshButton1">
+      <property name="geometry">
+       <rect>
+        <x>1230</x>
+        <y>580</y>
+        <width>61</width>
+        <height>21</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true"/>
+      </property>
+      <property name="text">
+       <string>Refresh</string>
       </property>
      </widget>
     </widget>
@@ -392,7 +408,7 @@ color: rgb(31, 40, 51);</string>
       <property name="geometry">
        <rect>
         <x>940</x>
-        <y>420</y>
+        <y>410</y>
         <width>351</width>
         <height>161</height>
        </rect>
@@ -576,8 +592,24 @@ color: rgb(31, 40, 51);</string>
         <height>28</height>
        </rect>
       </property>
+      <property name="styleSheet">
+       <string notr="true">background-color: rgb(204, 0, 0); color: rgb(31, 40, 51);</string>
+      </property>
       <property name="text">
        <string>Delete Team</string>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="refreshButton2">
+      <property name="geometry">
+       <rect>
+        <x>1230</x>
+        <y>580</y>
+        <width>61</width>
+        <height>21</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>Refresh</string>
       </property>
      </widget>
     </widget>
@@ -827,7 +859,7 @@ color: rgb(233, 233, 234);</string>
            </font>
           </property>
           <property name="text">
-           <string>Left Handed</string>
+           <string>Right Handed</string>
           </property>
           <property name="alignment">
            <set>Qt::AlignCenter</set>
@@ -860,6 +892,9 @@ color: rgb(233, 233, 234);</string>
          <height>41</height>
         </rect>
        </property>
+       <property name="styleSheet">
+        <string notr="true">background-color: rgb(31, 40, 51);</string>
+       </property>
        <property name="editable">
         <bool>true</bool>
        </property>
@@ -876,6 +911,9 @@ color: rgb(233, 233, 234);</string>
          <height>41</height>
         </rect>
        </property>
+       <property name="styleSheet">
+        <string notr="true">background-color: rgb(17, 100, 102); color: rgb(31, 40, 51);</string>
+       </property>
        <property name="text">
         <string>View Player</string>
        </property>
@@ -884,7 +922,7 @@ color: rgb(233, 233, 234);</string>
        <property name="geometry">
         <rect>
          <x>990</x>
-         <y>350</y>
+         <y>340</y>
          <width>301</width>
          <height>231</height>
         </rect>
@@ -1123,7 +1161,7 @@ color: rgb(233, 233, 234);</string>
                </font>
               </property>
               <property name="text">
-               <string>0</string>
+               <string>416</string>
               </property>
               <property name="alignment">
                <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
@@ -1162,7 +1200,7 @@ color: rgb(233, 233, 234);</string>
                </font>
               </property>
               <property name="text">
-               <string>0</string>
+               <string>325</string>
               </property>
               <property name="alignment">
                <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
@@ -1177,7 +1215,7 @@ color: rgb(233, 233, 234);</string>
                </font>
               </property>
               <property name="text">
-               <string>0</string>
+               <string>83</string>
               </property>
               <property name="alignment">
                <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
@@ -1192,7 +1230,7 @@ color: rgb(233, 233, 234);</string>
                </font>
               </property>
               <property name="text">
-               <string>0</string>
+               <string>4</string>
               </property>
               <property name="alignment">
                <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
@@ -1219,7 +1257,7 @@ color: rgb(233, 233, 234);</string>
                </font>
               </property>
               <property name="text">
-               <string>0</string>
+               <string>18</string>
               </property>
               <property name="alignment">
                <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
@@ -1246,7 +1284,7 @@ color: rgb(233, 233, 234);</string>
                </font>
               </property>
               <property name="text">
-               <string>0</string>
+               <string>30</string>
               </property>
               <property name="alignment">
                <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
@@ -1273,7 +1311,7 @@ color: rgb(233, 233, 234);</string>
                </font>
               </property>
               <property name="text">
-               <string>0</string>
+               <string>128</string>
               </property>
               <property name="alignment">
                <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
@@ -1327,7 +1365,7 @@ color: rgb(233, 233, 234);</string>
                </font>
               </property>
               <property name="text">
-               <string>0</string>
+               <string>104</string>
               </property>
               <property name="alignment">
                <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
@@ -1559,6 +1597,35 @@ color: rgb(233, 233, 234);</string>
         </item>
        </layout>
       </widget>
+      <widget class="QPushButton" name="refreshbutton3">
+       <property name="geometry">
+        <rect>
+         <x>1230</x>
+         <y>580</y>
+         <width>61</width>
+         <height>21</height>
+        </rect>
+       </property>
+       <property name="text">
+        <string>Refresh</string>
+       </property>
+      </widget>
+      <widget class="QPushButton" name="deletePlayerButton">
+       <property name="geometry">
+        <rect>
+         <x>993</x>
+         <y>287</y>
+         <width>291</width>
+         <height>41</height>
+        </rect>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">background-color: rgb(204, 0, 0); color: rgb(31, 40, 51);</string>
+       </property>
+       <property name="text">
+        <string>Delete Player</string>
+       </property>
+      </widget>
      </widget>
     </widget>
     <widget class="QWidget" name="pointsTableTab">
@@ -1697,6 +1764,19 @@ color: rgb(233, 233, 234);</string>
         <width>941</width>
         <height>551</height>
        </rect>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="refreshButton4">
+      <property name="geometry">
+       <rect>
+        <x>1230</x>
+        <y>580</y>
+        <width>61</width>
+        <height>21</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>Refresh</string>
       </property>
      </widget>
     </widget>
@@ -1879,7 +1959,7 @@ color: rgb(233, 233, 234);</string>
           <string notr="true">background-color: rgb(31, 40, 51);</string>
          </property>
          <property name="title">
-          <string>Longest Sixes</string>
+          <string>Highest Scores</string>
          </property>
          <layout class="QVBoxLayout" name="verticalLayout_5">
           <item>
@@ -1897,7 +1977,7 @@ color: rgb(23, 30, 29);</string>
                 </font>
                </property>
                <property name="text">
-                <string>MS Dhoni</string>
+                <string>Suresh Raina</string>
                </property>
                <property name="alignment">
                 <set>Qt::AlignBottom|Qt::AlignLeading|Qt::AlignLeft</set>
@@ -1912,7 +1992,7 @@ color: rgb(23, 30, 29);</string>
                 </font>
                </property>
                <property name="text">
-                <string>101m</string>
+                <string>121</string>
                </property>
                <property name="alignment">
                 <set>Qt::AlignBottom|Qt::AlignRight|Qt::AlignTrailing</set>
@@ -1948,7 +2028,7 @@ color: rgb(23, 30, 29);</string>
                 </font>
                </property>
                <property name="text">
-                <string>MS Dhoni</string>
+                <string>Virat Kohli</string>
                </property>
                <property name="alignment">
                 <set>Qt::AlignBottom|Qt::AlignLeading|Qt::AlignLeft</set>
@@ -1963,7 +2043,7 @@ color: rgb(23, 30, 29);</string>
                 </font>
                </property>
                <property name="text">
-                <string>101m</string>
+                <string>109</string>
                </property>
                <property name="alignment">
                 <set>Qt::AlignBottom|Qt::AlignRight|Qt::AlignTrailing</set>
@@ -1978,7 +2058,7 @@ color: rgb(23, 30, 29);</string>
                 </font>
                </property>
                <property name="text">
-                <string>(CSK)</string>
+                <string>(RCB)</string>
                </property>
               </widget>
              </item>
@@ -1999,7 +2079,7 @@ color: rgb(23, 30, 29);</string>
                 </font>
                </property>
                <property name="text">
-                <string>MS Dhoni</string>
+                <string>Shreyas Iyer</string>
                </property>
                <property name="alignment">
                 <set>Qt::AlignBottom|Qt::AlignLeading|Qt::AlignLeft</set>
@@ -2014,7 +2094,7 @@ color: rgb(23, 30, 29);</string>
                 </font>
                </property>
                <property name="text">
-                <string>101m</string>
+                <string>99</string>
                </property>
                <property name="alignment">
                 <set>Qt::AlignBottom|Qt::AlignRight|Qt::AlignTrailing</set>
@@ -2029,7 +2109,7 @@ color: rgb(23, 30, 29);</string>
                 </font>
                </property>
                <property name="text">
-                <string>(CSK)</string>
+                <string>(DC)</string>
                </property>
               </widget>
              </item>
@@ -2065,7 +2145,7 @@ color: rgb(23, 30, 29);</string>
                 </font>
                </property>
                <property name="text">
-                <string>101m</string>
+                <string>83</string>
                </property>
                <property name="alignment">
                 <set>Qt::AlignBottom|Qt::AlignRight|Qt::AlignTrailing</set>
@@ -2101,7 +2181,7 @@ color: rgb(23, 30, 29);</string>
                 </font>
                </property>
                <property name="text">
-                <string>MS Dhoni</string>
+                <string>Rishabh Pant</string>
                </property>
                <property name="alignment">
                 <set>Qt::AlignBottom|Qt::AlignLeading|Qt::AlignLeft</set>
@@ -2116,7 +2196,7 @@ color: rgb(23, 30, 29);</string>
                 </font>
                </property>
                <property name="text">
-                <string>101m</string>
+                <string>68</string>
                </property>
                <property name="alignment">
                 <set>Qt::AlignBottom|Qt::AlignRight|Qt::AlignTrailing</set>
@@ -2131,7 +2211,7 @@ color: rgb(23, 30, 29);</string>
                 </font>
                </property>
                <property name="text">
-                <string>(CSK)</string>
+                <string>(DC)</string>
                </property>
               </widget>
              </item>
