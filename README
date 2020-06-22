@@ -4,4 +4,5 @@ cd /opt/lampp
 sudo ./manager-linux-x64.run
 localhost/phpmyadmin
 
+To convert UI to .py file use command
 pyuic5 -x liveMatch.ui -o liveMatch.py
